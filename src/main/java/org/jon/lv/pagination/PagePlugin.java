@@ -24,7 +24,7 @@ import java.util.Properties;
 
 
 @Intercepts( {
-        @Signature(method = "prepare", type = StatementHandler.class, args = {Connection.class})
+        @Signature(method = "prepare", type = StatementHandler.class, args = {Connection.class, Integer.class})
         ,@Signature(method = "query", type = Executor.class, args = {MappedStatement.class,Object.class, RowBounds.class,ResultHandler.class})
         ,@Signature(method = "query", type = Executor.class, args = {MappedStatement.class,Object.class, RowBounds.class,ResultHandler.class,CacheKey.class,BoundSql.class})
 })
